@@ -1,0 +1,110 @@
+.finance-card-wrapper{
+    width:1260px;
+    margin:0 auto;
+    padding:20px 0;
+
+    .nav{
+        height:50px;
+        line-height: 30px;
+        padding:10px;
+        border: 1px solid #e3e7ed;
+        background:#fff;
+
+       div.left{
+        float:left; 
+        color: #333;
+        font-weight: 700;
+        padding-left:10px;
+       }
+       div.right{
+        float:right; 
+       }
+       div.middle{
+        margin-left:300px;
+        margin-right:300px;
+        overflow: hidden;
+        display: inline-block;
+        text-align: center;
+        a {
+            display: inline-block;
+            span{
+                display: inline-block;
+                width:80px;
+                margin-left:20px;
+                color: #666;
+                font-size: 15px;
+            }
+        }
+        .active {
+            position: relative;
+            span {
+                color: #E14C46;
+                display: inline-block;
+                width:100px;
+                font-size: 15px;
+                margin-left:20px;
+                    &::after {
+                        content: "";
+                        width: 20%;
+                        height: 3px;
+                        position: absolute;
+                        top: 26px;
+                        left: 60px;
+                        background-color: #E14C46;
+                        
+                    }
+                }
+        }
+
+       }
+    }
+
+
+    .finance-card-btnArea{
+        text-align: right;
+    }
+    
+    .finance-card-table{
+        padding:60px;
+        .card-table{
+           
+            border: 1px solid #e3e7ed;
+        }
+        
+    }
+
+    .part{
+        border: 1px solid #e3e7ed;
+        border-radius: 2px;
+        margin-bottom: 10px;
+        padding: 20px 20px 25px;
+        .title{
+            margin-bottom: 10px;
+            padding-left:10px;
+            position: relative;
+			&:after {
+				background-color: red;
+			    content: "";
+			    height: 8px;
+			    left: 0;
+			    margin-top: -4px;
+			    position: absolute;
+			    top: 50%;
+			    width: 4px;
+			}
+        }
+    }
+    .part:first-child{
+        border-top:none;
+    }
+
+    button{
+        margin-right:20px;
+        color: #fff;
+        width: 80px;
+        border-radius: .2rem;
+        background: #00b39e!important;
+        border-color: #00b39e!important;
+    }
+    
+}

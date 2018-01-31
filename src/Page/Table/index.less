@@ -1,0 +1,434 @@
+// 字体颜色 黑色
+@b-color: #333333;
+// 白色
+@w-color: #ffffff;
+//按钮背景色 包括行内按钮
+@t-btn-bgcolor: #00b39e;
+@t-btn-hovercolor:#009a88;
+@t-btn-lightbgcolor:#d9f3f0;
+// 页签红色
+@t-tab-color: #E14C46;
+// 页面背景色
+@t-bgcolor: #f5f5f5;
+// 表格每行hover颜色
+@t-table-hover: #f4f9f7;
+// 表格头部颜色
+@t-table-header: #f2f2f2;
+//border-color
+@border-color: #E3E7ED;
+
+/**布局类**/
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.cf{
+    *zoom: 1;
+
+    &:before, &:after {
+        display: table;
+        content: " ";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+// 弹出模态
+.table-modal {
+	display: flex !important;
+	justify-content: center;
+    align-items: center;
+    .u-modal-content {
+        .u-modal-header {
+            border-bottom: 1px solid #e9e9e9;
+            padding: 15px 20px;
+            .u-modal-title {
+                font-size: 13px;
+                color: #666;
+                font-family: MicrosoftYaHei;
+                font-weight: normal;
+            }
+            .u-close {
+                color: #999;
+                opacity: 1;
+                &:hover {
+                    color: #666;
+                }
+            }
+        }
+        .u-modal-body {
+            padding: 25px 20px 10px 40px;
+            .table-modal-form {
+                padding: 0 80px;
+                &.u-form .u-row .u-form-item.u-form-inline {
+                    min-height: 54px;
+                }
+            }
+            .u-form-group {
+                .modal-label {
+                    display: block;
+                    float: left;
+                    width: 25% !important;
+                    text-align: right;
+                    line-height: 30px;
+                    font-size: 13px;
+                    font-family: MicrosoftYaHei;
+                    color: #666;
+                    // margin-bottom: 15px;
+                    .required {
+                        color: red;
+                        font-style: normal;
+                        margin-right: 6px;
+                    }
+                }
+                .modal-content {
+                    margin-left: 10px;
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    font-size: 13px;
+                    width: 240px ;
+                    input {
+                        font-size: 13px;
+                    }
+                    &.modal-small {
+                        width: 120px ;
+                        .u-select-selection {
+                            width: 120px ;
+                        }
+                        .u-select-dropdown {
+                            width: 120px ;
+                        }
+                        div {
+                            width: 120px ;
+                        }
+                    }
+                    &.modal-input-small {
+                        width: 120px ;
+                    }
+                }
+                // 下拉框字体大小
+                .u-select {
+                    font-size: 13px;
+                }
+                .u-row.refer {
+                    margin-left: 10px;
+                    display: inline-block;
+                    width: 240px ;
+                    margin-bottom: 15px;
+                    // input{
+                    // 	font-size: 13px;
+                    // }
+                }
+                .u-modal-content {
+                    font-size: 13px;
+                }
+            }
+        }
+        .u-modal-footer {
+            height: 60px;
+            padding: 10px 21px;
+            background-color: #fafafa;
+            border-radius: 0px 0px 4px 4px;
+            .btn-2 {
+                background-color: @t-btn-bgcolor;
+                color: @w-color;
+                height: 36px ;
+                width: 102px ;
+                font-size: 13px;
+                &:hover {
+                    background-color: @t-btn-hovercolor;
+                    border-color: @t-btn-hovercolor;
+                }
+            }
+            .btn-2.btn-cancel {
+                background-color: @w-color;
+                border: 1px solid #bdbdbd;
+                border-radius: 2px;
+                color: #333;
+                margin-left: 8px;
+                &:hover {
+                    background-color: @w-color ;
+                    border-color: @t-btn-bgcolor;
+                    color: @t-btn-bgcolor;
+                }
+            }
+        }
+    }
+}
+
+// select下拉展开
+.u-select-dropdown {
+    animation: 0.3s ease;
+    .u-select-dropdown-menu {
+        .u-select-dropdown-menu-item,
+        .u-select-dropdown-menu-item-active {
+            height: 28px !important;
+            line-height: 28px !important;
+            padding: 0 8px !important;
+            color: #666 !important;
+            background: @w-color !important;
+            &:hover,
+            &.u-select-dropdown-menu-item-selected {
+                background: #eee !important;
+                color: @t-btn-bgcolor !important;
+                font-weight: 400 !important;
+            }
+        }
+    }
+}
+
+// 分页部分
+.table-pagination-group {
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid @border-color;
+    border-top: none;
+    background-color: @w-color;
+    border-radius: 0 0 3px 3px;
+    padding: 0px 20px;
+    margin-top: -1px;
+    z-index: 10;
+    .page-size {
+        float: left;
+        .u-select {
+            width: 80px;
+            margin-right: 10px;
+        }
+
+        .u-select-selection {
+            border-radius: 2px !important;
+            .u-select-selection__rendered {
+                margin: 0 0 0 8px;
+                .u-select-selection-selected-value {
+                    padding: 0;
+                    height:18px; 
+                    font-size:13px;
+                    font-family:PingFangSC-Regular;
+                    color:rgba(0,0,0,0.65);
+                    line-height:18px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+
+    .u-select-selection--single {
+        margin-top: 10px;
+        .u-select-selection-selected-value {
+            line-height: 30px;
+        }
+    }
+
+    .table-pagination {
+        .u-pagination {
+            float: right;
+            margin-right: -5px;
+            font-size: 13px;
+            height: 50px;
+            line-height: 50px;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            li {
+                height: 30px;
+                :hover {
+                    border-color: @t-btn-bgcolor;
+                }
+            }
+            & > .active > a {
+                // background-color: @t-btn-bgcolor;
+                // border-color: @t-btn-bgcolor;
+                color: @t-btn-bgcolor;
+                border-color: #c9c9c9;
+                background-color: #fff;
+                height: 26px;
+                line-height: 26px;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            & > li > a,
+            & > li > span {
+                border-color: #e3e7ed;
+                color: #595959;
+                height: 26px;
+                line-height: 26px;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            li {
+                margin-left: 8px;
+                a {
+                    color: rgba(0,0,0,0.65);
+                    border: 1px solid #E3E7ED;
+                }
+                &:first-child, &:last-child {
+                    a {
+                        border-radius: 2px;
+                    }
+                }
+            }
+            li:not(.active):hover a{
+                color: @t-btn-bgcolor;
+                border: 1px solid #C9C9C9;
+                line-height: 26px;
+            }
+            li.active a {
+                background: @w-color;
+                color: @t-btn-bgcolor;
+                border: 1px solid @t-btn-bgcolor;
+                line-height: 26px;
+            }
+            li.disabled:not(:first-child):not(:last-child) {
+                margin-left: 4px !important;
+                a {
+                    border: none;
+                    line-height: 22px;
+                    span {
+                        color: #ccc;
+                        font-size: 24px;
+                        position: relative;
+                        top: -4px;
+                    }
+                }
+            }
+            li.disabled:not(:first-child):not(:last-child) +li {
+                margin-left: 4px !important;
+            }
+
+            li.disabled:first-child a span, li.disabled:last-child a span {
+                line-height: 24px;
+            }
+        }
+    }
+    
+    &.no-moredata {
+        text-align: center;
+        font-size: 13px;
+        font-family: PingFangSC-Regular;
+        color: #999;
+    }
+}
+
+// 表格
+.simple-table {
+    .u-table {
+        border: 1px solid @border-color;
+        .money-right {
+            text-align: right !important;
+        }
+        .u-table-row.u-table-row-level-0 {
+            &:hover {
+                td,
+                .u-table-row-expand-icon {
+                    background: @t-table-hover!important;
+                }
+            }
+        }
+        .u-table-body {
+            min-height: 440px;
+            background-color: #fff;
+        }
+        i {
+            margin-right: 12px;
+            cursor: pointer;
+        }
+        .u-label {
+            font-size: 13px;
+        }
+        // 表头
+        .u-table-thead {
+            border-bottom: 1px solid @border-color;
+            tr {
+                background-color: @t-table-header;
+                height: 40px;
+                border-bottom: none;
+
+                &:hover {
+                    background: #f2f2f2;
+                }
+
+                th {
+                    background-color: transparent;
+                    font-family: PingFangSC-Regular;
+                    font-size: 13px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    overflow: initial;
+                    white-space: initial;
+                    text-overflow: initial;
+                    // overflow: hidden;
+                    // white-space: nowrap;
+                    // text-overflow: ellipsis;
+                    color: #000 !important;
+                    font-weight: 400 !important;
+                }
+            }
+        }
+        .u-table-tbody {
+            border: none !important;
+            tr {
+                background-color: @w-color;
+                height: 40px;
+                &:hover {
+                    background: @t-table-hover!important;
+                }
+                .icon-style {
+                    &:hover {
+                        color: @t-btn-bgcolor;
+                    }
+                }
+                td {
+                    background-color: transparent;
+                    font-family: PingFangSC-Regular;
+                    font-size: 13px;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    max-width: 40px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    &:nth-child(1) {
+                        padding-left: 20px;
+                    }
+                    .table-jump {
+                        //table里进行路由跳转
+                        color: #0073da;
+                        cursor: pointer;
+                        &:active {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        .u-table-content {
+            // 空列表样式
+            .u-table-placeholder {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -35px;
+                margin-left: -35px;
+                min-height: auto;
+                border: none;
+                min-height: 50px;
+                img {
+                    width: 52px;
+                }
+            }
+        }
+        &.double .u-table-tbody tr {
+            //一列显示俩行时，行高50px
+            height: 50px;
+        }
+    }
+}
+
+.rc-calendar-picker {
+    z-index: 3322;
+    background-color: #223;
+}
+    
+

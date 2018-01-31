@@ -1,0 +1,77 @@
+//select、datepicker、rangepicker、number、input、textarea
+//radio、checkbox、switch、label
+{
+	"page": null,
+	"investForm": {
+		"moduleType": "form",
+		"templet": null,
+		"items": [
+			{
+				"key": "investtype",
+				"label": "存款类型",
+				"itemType": "select",
+				"disabled": false,
+				"visible": true,
+				"col": 4,
+				"leftSpace": 6,
+				"rightSpace": 6,
+				"rows": 3,
+				"scale": null,
+				"required": true,
+				"maxLength": null,
+				"unit": "%",
+				"ratio": "0.01",
+				"formatType": null,
+				"options": [
+					{
+						"display": "活期",
+						"value": "0"
+					},
+					{
+						"display": "三个月",
+						"value": "1"
+					},
+					{
+						"display": "半年",
+						"value": "2"
+					}
+				]
+			},
+			{}
+		]
+	},
+	"investTable": {
+		"moduleType": "grid",
+		"pagination": false,
+		"columns": [
+			{
+				"key": "investtype",
+				"label": "存款类型",
+				"itemType": "select",
+				"disabled": false,
+				"visible": true,
+				"scale": null,
+				"required": true,
+				"maxLength": null,
+				"unit": "%",
+				"ratio": "0.01",
+				"formatType": null,
+				"width": null,
+				"options": [
+					{
+						"display": "活期",
+						"value": "0"
+					},
+					{
+						"display": "三个月",
+						"value": "1"
+					},
+					{
+						"display": "半年",
+						"value": "2"
+					}
+				]
+			}
+		]
+	}
+}

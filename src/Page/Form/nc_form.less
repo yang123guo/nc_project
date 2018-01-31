@@ -1,0 +1,201 @@
+// colors
+// 字体颜色 黑色
+@b-color: #333333;
+// 白色
+@w-color: #ffffff;
+//按钮背景色 包括行内按钮
+@t-btn-bgcolor: #00b39e;
+@t-btn-hovercolor:#009a88;
+@t-btn-lightbgcolor:#d9f3f0;
+// 页签红色
+@t-tab-color: #E14C46;
+// 页面背景色
+@t-bgcolor: #f5f5f5;
+// 表格每行hover颜色
+@t-table-hover: #f4f9f7;
+// 表格头部颜色
+@t-table-header: #f2f2f2;
+//border-color
+@border-color: #E3E7ED;
+
+
+
+.nc-form-wrapper {
+
+	font-size: 13px;
+
+	.u-row {
+
+		.u-col-md-2,.u-col-sm-2,.u-col-xs-2 {
+			text-align: right;
+			padding-right: 0;
+		}
+
+
+
+		.u-col-md-4,.u-col-sm-4,.u-col-xs-4 {
+			padding-left: 0;
+		}
+		.u-col-md-10, .u-col-sm-10, .u-col-xs-10 {
+			padding-left: 0;
+		}
+
+		.u-label {
+			font-size: 13px;
+		}
+		.u-form-item {
+
+			&.u-form-inline {
+				min-height: 49px;
+			}
+
+			min-height: 49px;
+			color: #333333;
+
+
+			.uf {
+				// font-family:"iconfont" !important; 
+				font-style:normal;
+				-webkit-font-smoothing: antialiased !important;
+				color: #999;
+				-moz-osx-font-smoothing: grayscale !important;
+			}
+
+			div {
+				display: inline-block;
+				&.u-form-error {
+					font-size: 12px;
+					display: none;
+					&.show {
+						display: inline-block !important; 
+						margin-left: 10px !important; 
+					}
+				}
+			}
+
+			.u-input-group-outer {
+				width: 450px !important;
+				max-width: 450px !important;
+				.u-input-group {
+					width: 450px !important;
+				}
+
+				.u-form-control {
+					height: 28px;
+					border-radius: 2px;
+					width: 240px;
+					z-index: auto;
+					&:focus {
+						border-color: @t-btn-bgcolor;
+						
+					}
+					&.number-formcontrol {
+						width: 150px;
+					}
+					&.error-border {
+						border-color: red;
+						color: red;
+					}
+				}
+
+				.u-radio-group {
+					max-width: 260px;
+					.u-radio {
+						line-height: 32px;
+						.u-radio-label {
+
+							padding-left: 20px;
+
+							&::before,&::after {
+								border-color: rgba(217,217,217,1);
+								width: 14px;
+								height: 14px;
+								bottom: 9px;
+								font-size: 12px;
+								// background-color: rgba(217,217,217,1);
+							}
+							&::after {
+								visibility: hidden;
+							}
+							
+						}
+
+						&.is-checked  {
+
+							.u-radio-label {
+
+								&::after {
+									background-color: @t-btn-bgcolor;
+									width: 6px;
+									height: 6px;
+									top: 13px;
+									border-radius: 3px;
+									margin-left: 4px;
+									visibility: visible;
+								}
+
+								&::before {
+									background-color: #fff;
+									box-shadow: inset 0 0 0 10px #fff !important;
+									border-color: @t-btn-bgcolor;
+									
+								}
+								
+							}
+
+
+						}
+					}
+				}
+
+
+				.refer {
+					width: 255px;
+					max-width: 255px;
+					// padding-left: 15px;
+					padding-right: 15px;
+					.u-col-xs-12 {
+						// padding-right: 15px;
+						
+					}
+				}
+
+				.u-switch {
+					&.is-checked {
+						border-color: @t-btn-bgcolor;
+						background-color: @t-btn-bgcolor;
+					}
+				}
+
+
+				.datepicker-input-group {
+					width: 150px !important;
+					.u-form-control {
+						width: 100%;
+					}
+					.u-input-group-btn {
+						right: 25px;
+						z-index: auto;
+					}
+				}
+
+				.input-error-message {
+					color: red;
+					line-height: 28px;
+				}
+
+				
+			}
+
+			.u-select-selection {
+				width: 120px;
+			}
+
+			label.u-label {
+				font-size: 13px !important;
+				color: #333333;
+			}
+
+		}
+	}
+}

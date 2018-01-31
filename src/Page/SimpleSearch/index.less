@@ -1,0 +1,59 @@
+@import '../../public/variables.less';
+.bd-header{
+    width: 1260px;
+    height: 50px;
+    margin: auto;
+    border: 1px solid #e3e7ed;
+    border-radius: 3px 3px 0 0;
+    line-height: 50px;
+    .bd-header-title{
+        color: #333;
+        display: inline-block;
+        font-family: PingFangHK-Medium;
+        font-weight: 700;
+        font-size: 16px;
+        margin: auto 20px;
+    }
+    .u-button{
+        color: #ffffff;
+        width: 80px;
+        height: 30px;
+        border-radius: 0.2rem;
+        margin-top: -6px;
+        background: #00b39e!important;
+        border: none;
+        border-color: #00b39e!important;
+    }
+    .bd-header-search{
+        display: block;
+        width: 128px;
+        margin-right: 20px;
+        width: 240px;
+        float: right;
+        position: relative;
+        .u-form-control{
+            border: 1px solid #e3e7ed;
+            
+        }
+        .u-form-control-suffix{
+           top:43%;
+           cursor: pointer;
+           color: #e3e7ed;
+           .uf{
+               display: none
+           }
+        }
+        .u-input-suffix{
+            .uf{
+               display: none
+           }
+        }
+    }
+    input::-webkit-input-placeholder{
+        color: #e3e7ed;
+    }
+    .searchbutton{
+        position: absolute;
+        right: 10px;
+    }
+}

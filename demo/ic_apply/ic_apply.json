@@ -1,0 +1,31 @@
+{
+	"formArea1": {
+		"moduleType": "form",
+		"status": "browse",
+		"items": [
+			{
+				"id": "username",
+				"label": "用户名",
+				"itemType": "input",
+				"disabled": false,
+				"initialValue": "liyxt",
+				"inputType": "text"
+			},
+			{
+				"id": "password",
+				"label": "密码",
+				"itemType": "input",
+				"disabled": false,
+				"inputType": "password"
+			}
+		]
+	},
+	"formArea2": {
+		"moduleType": "form",
+		"status": "edit",
+		"items": [ {} ]
+	},
+	"tableArea1": {
+		"moduleType": "table"
+	}
+}

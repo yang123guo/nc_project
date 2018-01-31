@@ -1,0 +1,123 @@
+@import '../../public/variables.less';
+.toast-mask-modal {
+	.toast-modal {
+		position: fixed;
+		z-index: 999999999999;
+		top: 230px;
+		left: 50%;
+		margin-left: -264px;
+		width: 528px;
+		height: 93px;
+		border-radius: 4px;
+		font-size: 12px;
+		font-family: 'Microsoft-yahei';
+		background: #fff;
+		text-align: left;
+		border-left-width: 11px !important;
+		&.success {
+			box-shadow: 0 1px 3px 3px rgba(0, 181, 120, 0.2);
+		}
+		&.danger {
+			box-shadow: 0 1px 3px 3px rgba(225, 76, 70, 0.2);
+		}
+		&.warning {
+			box-shadow: 0 1px 3px 3px rgba(255, 143, 47, 0.2);
+		}
+		&.info {
+			box-shadow: 0 1px 3px 3px rgba(16, 142, 233, 0.2);
+		}
+	}
+	.success.toast-modal {
+		height: 60px !important;
+		border: 1px solid #00b578;
+		.toast-box {
+			top: 5px;
+			.toast-title {
+				font-size: 18px;
+				min-width: 182px !important;
+				max-width: 410px !important;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+		.toast-icon {
+			font-size: 25px !important;
+			margin-right: 15px !important;
+		}
+	}
+	.toast-modal.danger {
+		border: 1px solid @t-tab-color;
+	}
+	.toast-modal.warning {
+		border: 1px solid #ff8f2f;
+	}
+	.toast-modal.info {
+		border: 1px solid #108ee9;
+	}
+	.toast-modal .close-icon {
+		position: absolute;
+		display: inline-block;
+		right: 16px;
+		cursor: pointer;
+		color: #999;
+		top: 14px;
+		font-size: 14px;
+		&:hover {
+			color: #00b578 !important;
+		}
+	}
+	.toast-modal .toast-icon {
+		display: inline-block;
+		padding: 0 !important;
+		cursor: auto !important;
+		font-size: 28px;
+		margin: 0 17px 0 20px;
+		position: relative;
+		top: 10px;
+	}
+	.toast-icon.success,
+	.toast-icon.succes:hover {
+		color: #00b578 !important;
+	}
+	.toast-icon.danger,
+	.toast-icon.danger:hover,
+	.danger .close-icon:hover {
+		color: @t-tab-color !important;
+	}
+	.toast-icon.warning,
+	.toast-icon.warning:hover,
+	.warning .close-icon:hover {
+		color: #ff8f2f !important;
+	}
+	.toast-icon.info,
+	.toast-icon.info:hover,
+	.info .close-icon:hover {
+		color: #108ee9 !important;
+	}
+	.toast-box {
+		display: inline-block;
+		position: relative;
+		top: 15px;
+		vertical-align: middle;
+		.toast-title {
+			color: @b-color;
+			font-size: 16px;
+			height: 21px;
+			line-height: 21px;
+		}
+		.toast-content {
+			margin: 0;
+			width: 410px;
+			height: 36px;
+			text-align: left;
+			line-height: 18px;
+			color: #666;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+		}
+	}
+}
